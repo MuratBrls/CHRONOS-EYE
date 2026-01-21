@@ -1,0 +1,25 @@
+# CHRONOS-EYE Dependencies
+# Core AI/ML Libraries
+torch>=2.0.0
+torchvision>=0.15.0
+transformers>=4.30.0
+
+# Vector Database
+chromadb>=0.4.0
+
+# Computer Vision & Media Processing
+opencv-python>=4.8.0
+scenedetect[opencv]>=0.6.0
+
+# Audio Processing (Optional)
+faster-whisper>=0.8.0
+
+# Utilities
+numpy>=1.24.0
+Pillow>=10.0.0
+python-dotenv>=1.0.0
+tqdm>=4.65.0
+
+# Development
+pytest>=7.4.0
+black>=23.0.0

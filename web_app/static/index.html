@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHRONOS-EYE 👁️ Web</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>CHRONOS-EYE</h1>
+            <p class="subtitle">v1.0 • Web Interface</p>
+            <div class="stats" id="stats">Database: Loading...</div>
+        </header>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="search">👁️ Search Engine</button>
+            <button class="tab-btn" data-tab="index">⚡ Media Indexer</button>
+        </div>
+
+        <!-- Search Tab -->
+        <div class="tab-content active" id="search-tab">
+            <div class="search-box">
+                <input type="text" id="search-input"
+                    placeholder="Describe what you're looking for (e.g., 'a woman walking outdoor')">
+                <button id="search-btn" class="btn-primary">Search Locally</button>
+            </div>
+
+            <div class="results-grid" id="results"></div>
+
+            <div class="status" id="search-status"></div>
+        </div>
+
+        <!-- Index Tab -->
+        <div class="tab-content" id="index-tab">
+            <div class="index-form">
+                <label>Folder Path:</label>
+                <div class="path-input-group">
+                    <input type="text" id="folder-path" placeholder="C:\Users\...\Videos or paste path here">
+                    <button id="browse-btn" class="btn-browse">Browse Folder</button>
+                    <input type="file" id="folder-picker" webkitdirectory directory multiple style="display:none">
+                </div>
+
+                <div class="form-row">
+                    <label>Indexing Mode:</label>
+                    <select id="index-mode">
+                        <option value="true">Incremental</option>
+                        <option value="false">Full Re-index</option>
+                    </select>
+
+                    <label>VRAM Quantization:</label>
+                    <select id="vram-quant">
+                        <option value="float16">float16</option>
+                        <option value="float32">float32</option>
+                    </select>
+                </div>
+
+                <button id="index-btn" class="btn-primary">START INDEXING ENGINE</button>
+
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="status" id="index-status">Waiting to scan...</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+
+</html>

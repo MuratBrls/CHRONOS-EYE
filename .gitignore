@@ -1,0 +1,61 @@
+# Exclude virtual environment
+venv/
+.venv/
+env/
+
+# Exclude database files
+chromadb_storage/
+*.db
+*.sqlite
+
+# Exclude Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Exclude IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Exclude temp files
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Exclude build files
+build/
+dist/
+*.exe
+*.spec
+
+# Exclude model cache
+models/
+.cache/
+transformers_cache/
+
+# Exclude large files
+*.pth
+*.bin
+*.ckpt
+
+# Exclude personal data
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.jpg
+*.jpeg
+*.png
+*.gif
+test_media/
+sample_media/
+
+# Keep structure
+!web_app/static/css/
+!web_app/static/js/
